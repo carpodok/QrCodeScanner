@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <io.github.ponnamkarthik.richlinkpreview.RichLinkViewTelegram
+        android:id="@+id/richLinkViewTelegram"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_above="@+id/linkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linkLayout"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_border">
+
+        <TextView
+            android:id="@+id/linkTextView"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Link adress"
+            android:textStyle="bold"
+
+
+            />
+
+        <ImageView
+            android:background="@drawable/ripple_effect"
+            android:id="@+id/copyIcon"
+            android:padding="5dp"
+            android:src="@drawable/copy_icon"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goToWebsiteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/goBackScanner"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_border"
+        android:text="Go to the website" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goBackScanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_border"
+        android:text="Go back to scanner" />
+
+</RelativeLayout>
