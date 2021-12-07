@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         scanner.startAnimation(scanAnim)
 
         val barcodeDetector = BarcodeDetector.Builder(applicationContext)
-            .setBarcodeFormats(Barcode.ALL_FORMATS)
+            .setBarcodeFormats(Barcode.QR_CODE)
             .build()
 
 

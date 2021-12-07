@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QrCodeScanner">
         <activity
+            android:screenOrientation="portrait"
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

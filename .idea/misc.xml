@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ali Talha/AndroidStudioProjects/QrCodeScanner/app/src/main/res/drawable/custom_border.xml" value="0.27025641025641023" />
+        <entry key="..\:/Users/Ali Talha/AndroidStudioProjects/QrCodeScanner/app/src/main/res/drawable/custom_progressbar.xml" value="0.27025641025641023" />
         <entry key="..\:/Users/Ali Talha/AndroidStudioProjects/QrCodeScanner/app/src/main/res/drawable/cutom_border.xml" value="0.22407407407407406" />
         <entry key="..\:/Users/Ali Talha/AndroidStudioProjects/QrCodeScanner/app/src/main/res/drawable/ripple_effect.xml" value="0.22407407407407406" />
         <entry key="..\:/Users/Ali Talha/AndroidStudioProjects/QrCodeScanner/app/src/main/res/layout/activity_main.xml" value="0.24427083333333333" />

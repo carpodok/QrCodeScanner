@@ -5,23 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/black"
     >
 
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        >
 
-    <View
-        android:layout_marginHorizontal="20dp"
-        android:id="@+id/scannerView"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@drawable/scanner"
-        />
+        <View
+            android:id="@+id/scannerView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/scanner"
+            />
 
-    <SurfaceView
-        android:id="@+id/surface_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </RelativeLayout>
