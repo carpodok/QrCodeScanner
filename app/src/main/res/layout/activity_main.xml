@@ -8,7 +8,9 @@
     android:background="@color/black"
     >
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
+        android:padding="5dp"
+        android:background="@drawable/custom_camera_border"
         android:layout_centerInParent="true"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -29,7 +31,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
 
 
