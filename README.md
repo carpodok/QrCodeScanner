@@ -1,4 +1,4 @@
-#  █║▌║█║▌│║▌║▌█║ QrCodeScanner  ║█║▌║█║▌│║▌║▌█║
+#   QrCodeScanner  ║█║▌║█║▌│║▌║▌█║
 
 :red_circle: This app consist of 2 page. First to read the barcode and the other to show the link. It's quite simple.
 
