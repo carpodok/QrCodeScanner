@@ -10,7 +10,6 @@ import android.view.SurfaceView
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.vision.CameraSource
@@ -19,7 +18,7 @@ import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
 import java.io.IOException
 
-class MainActivity : AppCompatActivity() {
+class ScanPageActivity : AppCompatActivity() {
 
     lateinit var surfaceView: SurfaceView
     lateinit var cameraSource: CameraSource
@@ -42,14 +41,13 @@ class MainActivity : AppCompatActivity() {
         scanner = findViewById(R.id.scannerView)
         scanner.bringToFront()
 
-        scanAnim = AnimationUtils.loadAnimation(this@MainActivity, R.anim.scan_anim)
+        scanAnim = AnimationUtils.loadAnimation(this@ScanPageActivity, R.anim.scan_anim)
 
         detectBarcode()
     }
 
     private fun detectBarcode() {
 
-        //Toast.makeText(this@MainActivity, "Barcode scanner started", Toast.LENGTH_LONG).show()
         scanner.startAnimation(scanAnim)
 
         val barcodeDetector = BarcodeDetector.Builder(applicationContext)
@@ -67,14 +65,14 @@ class MainActivity : AppCompatActivity() {
             override fun surfaceCreated(holder: SurfaceHolder) {
                 try {
                     if (ActivityCompat.checkSelfPermission(
-                            this@MainActivity,
+                            this@ScanPageActivity,
                             Manifest.permission.CAMERA
                         ) == PackageManager.PERMISSION_GRANTED
                     ) {
                         cameraSource.start(surfaceView.holder)
                     } else {
                         ActivityCompat.requestPermissions(
-                            this@MainActivity,
+                            this@ScanPageActivity,
                             arrayOf(Manifest.permission.CAMERA),
                             REQUEST_CAMERA_PERMISSION
                         )
@@ -133,7 +131,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun intentToBarcodeLinkActivity(transferLink: String) {
-        val intent = Intent(this@MainActivity, MainActivity2::class.java)
+        val intent = Intent(this@ScanPageActivity, LinkPageActivity::class.java)
         intent.putExtra("link", transferLink)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)

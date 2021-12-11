@@ -8,14 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.SwitchCompat
 import io.github.ponnamkarthik.richlinkpreview.RichLinkViewTelegram
 import io.github.ponnamkarthik.richlinkpreview.ViewListener
 import java.lang.Exception
 import java.lang.StringBuilder
 
-class MainActivity2 : AppCompatActivity() {
+class LinkPageActivity : AppCompatActivity() {
 
     lateinit var goWebsiteBtn: Button
     lateinit var goBackToScannerBtn: Button
@@ -36,27 +34,19 @@ class MainActivity2 : AppCompatActivity() {
         val richLinkViewTelegram: RichLinkViewTelegram = findViewById(R.id.richLinkViewTelegram)
 
 
-        var isSucces = false
-
         richLinkViewTelegram.setLink(link, object : ViewListener {
             override fun onSuccess(status: Boolean) {
-               isSucces = true
             }
 
             override fun onError(e: Exception) {
-                isSucces = false
-
             }
         })
-
-
-        if (isSucces) progressBar.visibility = View.INVISIBLE
 
         linkTextView = findViewById(R.id.linkTextView)
         goWebsiteBtn = findViewById(R.id.goToWebsiteBtn)
         goBackToScannerBtn = findViewById(R.id.goBackScanner)
         copyIcon = findViewById(R.id.copyIcon)
-        //progressBar = findViewById(R.id.progressBar)
+       // progressBar = findViewById(R.id.progressBar)
 
         linkTextView.text = link
 
@@ -99,7 +89,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this@MainActivity2, MainActivity::class.java)
+        val intent = Intent(this@LinkPageActivity, ScanPageActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
