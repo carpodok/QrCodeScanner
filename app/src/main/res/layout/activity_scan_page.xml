@@ -8,6 +8,7 @@
     android:background="@color/black"
     >
 
+
     <RelativeLayout
         android:padding="5dp"
         android:background="@drawable/custom_camera_border"

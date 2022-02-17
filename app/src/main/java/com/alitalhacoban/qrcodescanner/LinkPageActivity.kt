@@ -6,7 +6,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import io.github.ponnamkarthik.richlinkpreview.RichLinkViewTelegram
 import io.github.ponnamkarthik.richlinkpreview.ViewListener
@@ -25,7 +24,7 @@ class LinkPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_link_page)
 
         val intent = intent
 

@@ -35,7 +35,7 @@ class ScanPageActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_scan_page)
 
         surfaceView = findViewById(R.id.surface_view)
         scanner = findViewById(R.id.scannerView)
@@ -96,12 +96,9 @@ class ScanPageActivity : AppCompatActivity() {
         })
 
         barcodeDetector.setProcessor(object : Detector.Processor<Barcode> {
+
             override fun release() {
-                /*Toast.makeText(
-                    this@MainActivity,
-                    "To prevent memory leaks barcode scanner has been stopped",
-                    Toast.LENGTH_SHORT
-                ).show()*/
+
             }
 
             override fun receiveDetections(detections: Detector.Detections<Barcode>) {
@@ -120,13 +117,13 @@ class ScanPageActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        supportActionBar!!.hide()
+       // supportActionBar!!.hide()
         cameraSource.release()
     }
 
     override fun onResume() {
         super.onResume()
-        supportActionBar!!.hide()
+       // supportActionBar!!.hide()
         detectBarcode()
     }
 
