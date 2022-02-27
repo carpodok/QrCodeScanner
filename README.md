@@ -13,6 +13,6 @@
 <br>
 
 
-:raised_hands: If you don't know how to make basic qrcode scanner app and want to learn, let's take a look at my article on this topic, you can take a look <a href="https://alitalhacoban.medium.com/barcode-scanner-app-android-studio-60f87b5a10cd">my article</a>  in my Medium account.
+:raised_hands: If you don't know how to make basic qrcode scanner app and want to learn, you can take a look <a href="https://alitalhacoban.medium.com/barcode-scanner-app-android-studio-60f87b5a10cd">my article</a> on this topic in my Medium account.
 
 https://user-images.githubusercontent.com/64840495/145682774-687067aa-e448-42aa-b13f-3d205544d17a.mp4
